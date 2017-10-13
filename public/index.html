@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spike Practice</title>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+
+</head>
+
+<body ng-app="myApp">
+<header>
+</header>
+<main>
+    <h1>API Test</h1>
+    <div ng-controller="PageController as PC">
+        <div ng-repeat="beer in PC.info.list">
+            <div>{{beer.name}} {{beer.style.name}} {{beer.breweries[0].name}} <img ng-src="{{beer.labels.large}}"></div>
+            
+        </div>
+    </div>
+</main>
+<footer></footer>
+</body>
+
+</html>
